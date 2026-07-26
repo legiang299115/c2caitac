@@ -1,0 +1,153 @@
+{
+  "projectInfo": {
+    "name": "School System",
+    "type": "web"
+  },
+  "collections": [
+    {
+      "name": "users",
+      "description": "User profiles (teachers, staff, admins)",
+      "documentType": {
+        "id": "string",
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "zaloId": "string",
+        "photoURL": "string",
+        "group": "string",
+        "role": "string",
+        "isHomeroom": "boolean",
+        "homeroomName": "string",
+        "departmentId": "string",
+        "hardLocks": "object"
+      }
+    },
+    {
+      "name": "departments",
+      "description": "Departments in the school",
+      "documentType": {
+        "id": "string",
+        "name": "string"
+      }
+    },
+    {
+      "name": "students",
+      "description": "Student profiles",
+      "documentType": {
+        "id": "string",
+        "name": "string",
+        "dob": "string",
+        "className": "string",
+        "rfidUid": "string"
+      }
+    },
+    {
+      "name": "devices",
+      "description": "RFID Scanner Devices",
+      "documentType": {
+        "id": "string",
+        "macAddress": "string",
+        "className": "string",
+        "name": "string"
+      }
+    },
+    {
+      "name": "attendanceRecords",
+      "description": "RFID attendance records",
+      "documentType": {
+        "id": "string",
+        "studentId": "string",
+        "timestamp": "string"
+      }
+    },
+    {
+      "name": "evaluations",
+      "description": "User evaluations",
+      "documentType": {
+        "userId": "string",
+        "scores": "object",
+        "totalScore": "number",
+        "ranking": "string",
+        "term": "string",
+        "formData": "object"
+      }
+    },
+    {
+      "name": "timesheets",
+      "description": "Timesheet requests (leaves, etc)",
+      "documentType": {
+        "id": "string",
+        "userId": "string",
+        "date": "string",
+        "type": "string",
+        "session": "string",
+        "period": "string",
+        "class": "string",
+        "code": "string",
+        "status": "string"
+      }
+    },
+    {
+      "name": "competitions",
+      "description": "User competitions data",
+      "documentType": {
+        "id": "string",
+        "userId": "string",
+        "name": "string",
+        "level": "string",
+        "prize": "string",
+        "evidenceUrl": "string"
+      }
+    },
+    {
+      "name": "homeroomData",
+      "description": "Homeroom teacher data per term",
+      "documentType": {
+        "userId": "string",
+        "term": "string",
+        "bhytPercent": "number",
+        "initialSize": "number",
+        "currentSize": "number",
+        "classRank": "number",
+        "rewardsAndDisciplines": "array"
+      }
+    },
+    {
+      "name": "evidences",
+      "description": "Evidences for evaluations",
+      "documentType": {
+        "id": "string",
+        "userId": "string",
+        "criteriaKey": "string",
+        "name": "string",
+        "url": "string"
+      }
+    },
+    {
+      "name": "taskDeclarations",
+      "description": "Tasks declared by users",
+      "documentType": {
+        "id": "string",
+        "userId": "string",
+        "taskName": "string",
+        "description": "string",
+        "date": "string",
+        "deadline": "string",
+        "evidenceUrl": "string",
+        "status": "string"
+      }
+    },
+    {
+      "name": "settings",
+      "description": "Global settings",
+      "documentType": {
+        "maxExcellentPercent": "number",
+        "superiorOrganization": "string",
+        "schoolName": "string",
+        "schoolYear": "string",
+        "zaloSettings": "object",
+        "attendanceSettings": "object"
+      }
+    }
+  ]
+}
